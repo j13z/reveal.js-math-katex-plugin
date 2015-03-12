@@ -51,7 +51,7 @@ Escape literal dollar characters with `\$`.
 
 Wrap the formula in an element with class formula (or math):
 
-`<div class="formula display">\frac{1}{1 + e^{-x}}</div>`
+`<div class="formula display"> \frac{1}{1 + e^{-x}} </div>`
 
 Display mode is in-line by default, add class `display` if needed.
 
