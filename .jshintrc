@@ -1,0 +1,73 @@
+{
+	// JSHint settings, see: http://jshint.com/docs/options/
+
+
+	// Style
+	// -----
+
+	// "maxlen":    80,    // {int}  Max number of characters per line
+	// -> Not enforced, but still use 80 characters max if possible.
+
+	"camelcase": true,     // Identifiers must be in camelCase
+
+	"curly":     true,     // Require {} for every new block or scope
+
+	"quotmark":  "single", // Quotation mark consistency:
+	                       //   false    : do nothing (default)
+	                       //   true     : ensure whatever is used is
+	                       //              consistent
+	                       //   "single" : require single quotes
+	                       //   "double" : require double quotes
+	                       //
+	                       // Disabled, because it occasionally makes sense
+	                       // to swap quotes, e.g. for sentences with
+	                       // apostrophes.
+
+
+	// Conventions for clean JS use
+	// ----------------------------
+
+	"strict": true,      // Requires all functions run in ES5 Strict Mode
+
+	"eqeqeq": true,      // Require triple equals (===) for comparison
+
+	"undef":  true,      // Require all non-global variables to be
+	                     // declared (prevents global leaks)
+
+	"unused": true,      // Require all defined variables be used
+
+
+
+	// Environments / globals
+	// ----------------------
+
+	"browser": true,
+
+	"devel":   true,
+
+
+
+	// Things to make JSHint work smoother
+	// -----------------------------------
+
+	"smarttabs": true,   // Disable mixed tabs and spaces warning if spaces
+						 // are used for alignment.
+
+	"indent":    false,  // Disable indentation warnings.
+
+	"funcscope": true,   // Disable weird warnings that tell you a variable
+						 // is out of scope as if JavaScript had block level
+						 // scope.
+						 // The intent of this warning is to make you declare
+						 // variables using var at function level (which might
+						 // be a convention or not but is irrelevant from a
+						 // language point of view).
+
+	"globalstrict": false,  // Allow global "use strict" (also enables 'strict')
+
+	"sub": true,         // This option suppresses warnings about using []
+	                     // notation when it can be expressed in dot notation:
+	                     // person['name'] vs. person.name.
+
+	"latedef": "nofunc"  // Does not work for version v2.5.11, though it should.
+}

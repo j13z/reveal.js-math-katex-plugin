@@ -1,0 +1,23 @@
+{
+  "name": "reveal.js-math-katex-plugin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "reveal.js plugin that renders mathematical formulas using KaTeX",
+  "scripts": {
+    "test": "./node_modules/node-qunit-phantomjs/bin/node-qunit-phantomjs test/qunit-test.html"
+  },
+  "keywords": [
+    "Reveal.js",
+    "formulas",
+    "math",
+    "KaTeX"
+  ],
+  "author": "Johannes Schmitz <code@j13z.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "node-qunit-phantomjs": "^1.2.0",
+    "qunitjs": "^1.17.1",
+    "reveal.js": "^3.0.0"
+  },
+  "dependencies": {}
+}

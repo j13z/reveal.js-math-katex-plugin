@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>QUnit test for reveal.js math-katex plugin</title>
+
+		<link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css">
+	</head>
+
+	<body style="overflow: auto;">
+
+		<div id="qunit"></div>
+  		<div id="qunit-fixture"></div>
+
+		<div class="reveal" style="display: none;">
+
+			<div class="slides">
+
+				<section data-math>
+					$$\sum_{i=0}^n \lambda_i$$
+
+					<div class="formula display test-wrapped">\sum_{i=0}^n \lambda_i</div>
+
+					<p>This is an escaped dollar: \$</p>
+				</section>
+
+				<section>
+					<p>Dollars $$$ should be ignored here. $</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="../node_modules/reveal.js/js/reveal.js"></script>
+		<script src="../node_modules/qunitjs/qunit/qunit.js"></script>
+
+		<script src="qunit-test.js"></script>
+
+	</body>
+</html>
