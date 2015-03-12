@@ -10,7 +10,7 @@ A [reveal.js](https://github.com/hakimel/reveal.js) plugin that renders mathemat
 
 ## Plugin setup
 
-1. Copy the `math-katex` directory (contains the plugin itself) into the `plugins` directory of reveal.js
+1. Download the latest release ([tar.gz](https://github.com/j13z/reveal.js-math-katex-plugin/releases/download/v0.1.0/reveal.js-math-katex-0.1.0.tar.gz) or [zip](https://github.com/j13z/reveal.js-math-katex-plugin/releases/download/v0.1.0/reveal.js-math-katex-0.1.0.zip)) and extract it into the `plugins` directory of your reveal.js presentation.
 
 2. Tell reveal.js to use the plugin:
 
