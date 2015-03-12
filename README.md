@@ -36,7 +36,7 @@ There are two usage modes:
 The rendered TeX-style formulas also get a class `formula` added so that you can style them. `$…$` formulas in addition get class `inline`, `$$…$$` class `display`.
 
 
-### TeX Style (dollars)
+### TeX style (dollars)
 
 - Use `$$…$$` for display-style (block) formulas: `$$\frac{1}{1 + e^{-x}}$$`
 
