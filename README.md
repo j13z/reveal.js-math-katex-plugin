@@ -23,6 +23,8 @@ A [reveal.js](https://github.com/hakimel/reveal.js) plugin that renders mathemat
     	]
     });
     ```
+A build of KaTeX is included with the plugin.
+
 
 ## Usage
 
