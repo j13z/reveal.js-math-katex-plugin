@@ -105,9 +105,18 @@ Reveal.initialize({
 });
 ```
 
+## Example
+
+To run the example in your browser, install reveal.js using npm (Node.js required):
+
+From the repository root directory: `$ npm install reveal.js`
+
+If you don't have Node.js installed: Download reveal.js and copy it into a new directory named `node_modules`.
+
+
 
 ## Tests
 
-Run tests (requires Node.js): `npm install && npm test`
+Run tests (requires Node.js): `$ npm install && npm test`
 
 Tests use [QUnit](http://qunitjs.com/) and [node-qunit-phantomjs](https://github.com/jonkemp/node-qunit-phantomjs).
