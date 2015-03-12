@@ -13,7 +13,7 @@
     "KaTeX"
   ],
   "author": "Johannes Schmitz <code@j13z.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "node-qunit-phantomjs": "^1.2.0",
     "qunitjs": "^1.17.1",
