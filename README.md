@@ -107,7 +107,7 @@ Reveal.initialize({
 
 ## Example
 
-To run the example in your browser, install reveal.js using npm (Node.js required):
+To run the example in your browser, clone or download this repository and install reveal.js using npm (Node.js required):
 
 From the repository root directory: `$ npm install reveal.js`
 
