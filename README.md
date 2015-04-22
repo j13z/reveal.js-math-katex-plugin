@@ -34,7 +34,7 @@ A build of KaTeX is included with the plugin.
 There are two usage modes:
 
 1. TeX-style, wrapped in `$…$` or `$$…$$`. Works in Markdown, too
-2. Wrapped in HTML elements with class `formula` (or `math`)
+2. Wrapped in HTML elements with class `formula` or `math`. (Don’t also use dollar syntax when using a class.)
 
 The rendered TeX-style formulas also get a class `formula` added so that you can style them. `$…$` formulas in addition get class `inline`, `$$…$$` class `display`.
 
