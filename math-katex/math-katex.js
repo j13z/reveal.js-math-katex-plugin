@@ -312,7 +312,7 @@ window.RevealMath = window.RevealMath || (function() {
 
 		each( wrappedElements, function ( e ) {
 
-			var formula = e.innerHTML;
+			var formula = e.textContent;
 			var offset = 0;    // For error-position correction
 
 			if (e.classList.contains( 'display' )) {
