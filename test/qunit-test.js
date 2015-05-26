@@ -60,8 +60,8 @@ Reveal.initialize({
 	math: {
 		enableGlobally: false,
 
-		katexScript:     '../math-katex/lib/katex/katex.min.js',
-		katexStylesheet: '../math-katex/lib/katex/katex.min.css'
+		katexScript:     '../math-katex/lib/katex-0.3.0/katex.min.js',
+		katexStylesheet: '../math-katex/lib/katex-0.3.0/katex.min.css'
 	},
 
 	dependencies: [
