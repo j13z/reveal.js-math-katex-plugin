@@ -14,8 +14,8 @@ KaTeX supports all major browsers, including Chrome, Safari, Firefox, Opera, and
 You can [download KaTeX](https://github.com/khan/katex/releases) and host it on your server or include the `katex.min.js` and `katex.min.css` files on your page directly from a CDN:
 
 ```html
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.2.0/katex.min.js"></script>
 ```
 
 #### In-browser rendering
@@ -48,6 +48,10 @@ For example:
 ```js
 katex.render("c = \\pm\\sqrt{a^2 + b^2}", element, { displayMode: true });
 ```
+
+#### Automatic rendering of math on a page
+
+Math on the page can be automatically rendered using the auto-render extension. See [the Auto-render README](contrib/auto-render/README.md) for more information.
 
 ## Contributing
 
