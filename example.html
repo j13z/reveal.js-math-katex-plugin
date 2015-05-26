@@ -12,7 +12,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css" id="theme">
@@ -39,6 +39,10 @@
 			.reveal .formula-source,
 			.reveal a {
 				color: #3F988E;
+			}
+
+			.reveal code {
+				padding: 0 0.25em;
 			}
 
 			.reveal pre.formula-source {
@@ -136,6 +140,22 @@
 					<div class="formula display">-\sum_{i=1}^n p(x_i) \log p(x_i)</div>
 				</section>
 
+
+				<section data-math>
+					<h2>Other Things</h2>
+
+					<p>
+						You can just use <code>&lt;</code> and <code>&gt;</code> for comparison operators,
+						<!-- oh the irony … -->
+						you don’t need to use HTML entities (<code>&amp;gt;</code> or <code>&amp;lt;</code>).
+					</p>
+
+					<p>
+						<code>\$a &gt; b, c &lt; d\$</code>
+						renders as
+						$a > b, c < d$. <!-- OK, there you see it -->
+					</p>
+				</section>
 			</div>
 		</div>
 
