@@ -76,7 +76,7 @@ window.RevealMath = window.RevealMath || (function() {
 			'    margin-left: 0.35em;',
 			'}'
 		]
-		.join('\n');
+		.join( '\n' );
 
 		document.head.appendChild( stylesheet );
 	}
@@ -89,6 +89,8 @@ window.RevealMath = window.RevealMath || (function() {
 	 * Replaces a formula within `$ … $` (inline) or `$$ … $$` (display).
 	 */
 	var replaceFormulaTex = (function() {
+
+		// Pre-compiled regular expressions
 
 		var regexInline   = /([^\\])\$([^\$]*)\$/g;       // $ … $
 		var regexDisplay  = /([^\\])\$\$([^\$]*)\$\$/g;   // $$ … $$
@@ -315,7 +317,7 @@ window.RevealMath = window.RevealMath || (function() {
 			var formula = e.textContent;
 			var offset = 0;    // For error-position correction
 
-			if (e.classList.contains( 'display' )) {
+			if ( e.classList.contains( 'display' ) ) {
 				// Prepend KaTeX instruction, correct offset
 
 				var prefix = '\\displaystyle {';
@@ -381,7 +383,7 @@ window.RevealMath = window.RevealMath || (function() {
 			options.url = url;
 		}
 
-		var type = options.url.split('.').slice(-2).indexOf('js') !== -1 ?
+		var type = options.url.split( '.' ).slice( -2 ).indexOf( 'js' ) !== -1 ?
 		           'script' :
 		           'stylesheet';
 
