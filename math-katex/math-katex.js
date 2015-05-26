@@ -211,9 +211,6 @@ window.RevealMath = window.RevealMath || (function() {
 			              s.slice( error.position ) +
 			              '</span>';
 
-			// Log
-			console.error( 'Formula error on slide ' + slideNumber, error );
-
 			// Just show a `window.alert`
 			if ( options.notificationsEnabled && !showedError ) {
 				window.alert(
@@ -223,25 +220,47 @@ window.RevealMath = window.RevealMath || (function() {
 
 				showedError = true;
 			}
+
+			throw new Error(
+				'Formula error on slide ' + slideNumber + ': ' +
+				error.message + '\n' +
+				error.stack
+			);
 		};
 	})();
 
 
 	/**
 	 * Returns the slide number for a `section` DOM element.
+	 *
+	 * @param {Node} element    An element on a slide, or the `section` itself.
 	 */
-	function getSlideNumber( slideElement ) {
+	function getSlideNumber( element ) {
 		var presentation = document.querySelector( '.reveal .slides' );
-
 		var slides = presentation.querySelectorAll( 'section' );
+		var slideElement = getParentSlide( element );
 
 		for ( var i = 0; i < slides.length; i++ ) {
 			if ( slides[i] === slideElement ) {
-				return i;    // -1 here because the title slide is not counted.
+				return i;     // -1 here because the title slide is not counted.
 			}
 		}
 
 		return null;
+	}
+
+
+	function getParentSlide( element ) {
+
+		if ( element.nodeName === 'SECTION' ) {
+			return element;
+		}
+
+		do {
+			element = element.parentNode;
+		} while ( element && element.nodeName !== 'SECTION' );
+
+		return element;
 	}
 
 
