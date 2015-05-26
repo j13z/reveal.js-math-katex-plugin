@@ -18,20 +18,35 @@
 
 			<div class="slides">
 
-				<section data-math>
+				<!-- Should replace two formulas here -->
+				<section data-math id="slide-1">
+					<!-- Dollar-wrapped -->
 					$$\sum_{i=0}^n \lambda_i$$
 
+					<!-- Wrapped in `div` with class -->
 					<div class="formula display test-wrapped">\sum_{i=0}^n \lambda_i</div>
+				</section>
 
+
+				<!-- `$` escapes should work -->
+				<section data-math id="slide-2">
 					<p>This is an escaped dollar: \$</p>
 				</section>
 
-				<section>
+
+				<!-- This slide should not be changed, despite the `$`s -->
+				<section id="slide-3">
 					<p>Dollars $$$ should be ignored here. $</p>
 				</section>
 
-			</div>
 
+				<section id="slide-4" data-math>
+					<p class="formula-1">$$ a > b, c < d $$</p>
+					<p class="formula formula-2">a > b, c < d</p>
+					<p class="html-entities">greater than: &gt;, less than: &lt;</p>
+				</section>
+
+			</div>
 		</div>
 
 		<script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
