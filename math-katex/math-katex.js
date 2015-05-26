@@ -99,7 +99,7 @@ window.RevealMath = window.RevealMath || (function() {
 		var regexCssClass = /<span class="katex">/;       // Used to add classes
 
 
-		return function ( mode, text ) {
+		return function ( mode, markup ) {
 			var regex;
 
 			if ( mode === 'inline'  ) {
@@ -116,6 +116,8 @@ window.RevealMath = window.RevealMath || (function() {
 			function replacer( _, lookbehind, group, offset ) {
 				// (Depends on mode, thus nested.)
 
+				group = replaceEntities( group );
+
 				if ( mode === 'display' ) {
 					var prefix = '\\displaystyle {';
 					offset += 2;    // $$
@@ -128,7 +130,6 @@ window.RevealMath = window.RevealMath || (function() {
 				}
 
 				var markup;
-
 				try {
 					markup = lookbehind + katex.renderToString( group );
 				}
@@ -147,9 +148,23 @@ window.RevealMath = window.RevealMath || (function() {
 				return markup;
 			}
 
-			return text.replace( regex, replacer );
+			markup = markup.replace( regex, replacer );
+			return markup;
 		};
 
+	})();
+
+
+	var replaceEntities = (function () {
+		var regexEntityLt = /&lt;/g;
+		var regexEntityGt = /&gt;/g;
+
+		return function ( markup ) {
+			// Replace `&lt;` and `&gt;`
+			return markup
+				.replace( regexEntityLt, '<' )
+				.replace( regexEntityGt, '>' );
+		};
 	})();
 
 
