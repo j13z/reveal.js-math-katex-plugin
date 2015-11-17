@@ -92,10 +92,11 @@
 					<script type="text/template">
 						## Two usage modes
 
-						- TeX-style, wrapped in <code>$…$</code> or <code>$$…$$</code> (escape with <code>\$</code>).
-						  Works in Markdown, too. Get a class <code>formula</code> for styles
+						- **TeX-style**, wrapped in <code>$…$</code> or <code>$$…$$</code>. Works in Markdown, too.
 
-						- Wrapped in HTML elements with class <code>formula</code> (or <code>math</code>)
+							Elements get a class <code>formula</code> for styling
+
+						- **Wrapped in HTML elements** with class <code>formula</code> (or <code>math</code>)
 					</script>
 				</section>
 
@@ -119,6 +120,10 @@
 
 					<p>
 						Single <code>\$…\$</code> render in-line:&ensp;$-\sum_{i=1}^n p(x_i) \log p(x_i)$.
+					</p>
+
+					<p>
+						Escape literal dollars with <code>\\$</code>.
 					</p>
 				</section>
 
@@ -155,6 +160,7 @@
 						renders as
 						$a > b, c < d$. <!-- OK, there you see it -->
 					</p>
+
 					<p>
 						Ampersands (<code>&amp;</code>) for matrices work, too:
 						$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$
