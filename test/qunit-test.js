@@ -51,6 +51,17 @@ Reveal.addEventListener( 'math-rendered', function () {
 		strictEqual( element( '#slide-4 .html-entities' ).innerHTML, text, 'did not change HTML entities' );
 	});
 
+
+	test( '`&` and `pmatrix`', function () {
+
+		var formulas = elements( '#slide-5 .formula, #slide-6 .formula' );
+		strictEqual( formulas.length, 2, 'found two formulas' );
+
+		each( formulas, function ( formula ) {
+			strictEqual( formula.innerHTML.indexOf( '$$' ),   -1, 'did replace `$$`' );
+			strictEqual( formula.textContent.indexOf( 'amp;' ),   -1, 'did not mess up the `&`' );
+		}) ;
+	});
 });
 
 

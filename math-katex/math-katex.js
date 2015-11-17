@@ -158,12 +158,14 @@ window.RevealMath = window.RevealMath || (function() {
 	var replaceEntities = (function () {
 		var regexEntityLt = /&lt;/g;
 		var regexEntityGt = /&gt;/g;
+		var regexEntityAmpersand = /&amp;/g;
 
 		return function ( markup ) {
 			// Replace `&lt;` and `&gt;`
 			return markup
 				.replace( regexEntityLt, '<' )
-				.replace( regexEntityGt, '>' );
+				.replace( regexEntityGt, '>' )
+				.replace( regexEntityAmpersand, '&' );
 		};
 	})();
 
