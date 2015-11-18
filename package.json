@@ -4,7 +4,7 @@
   "version": "0.3.0",
   "description": "reveal.js plugin that renders mathematical formulas using KaTeX",
   "scripts": {
-    "test": "./node_modules/node-qunit-phantomjs/bin/node-qunit-phantomjs test/qunit-test.html"
+    "test": "./node_modules/.bin/mocha-phantomjs test/test-runner.html"
   },
   "keywords": [
     "Reveal.js",
@@ -15,8 +15,9 @@
   "author": "Johannes Schmitz <code@j13z.com>",
   "license": "MIT",
   "devDependencies": {
-    "node-qunit-phantomjs": "^1.2.0",
-    "qunitjs": "^1.17.1",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "mocha-phantomjs": "^4.0.1",
     "reveal.js": "^3.0.0"
   },
   "dependencies": {}

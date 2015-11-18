@@ -1,25 +1,20 @@
 <!doctype html>
-<html lang="en">
-
+<html>
 	<head>
+		<title>Tests – reveal.js math-katex plugin</title>
 		<meta charset="utf-8">
-
-		<title>QUnit test for reveal.js math-katex plugin</title>
-
-		<link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css">
+		<!-- <link rel="stylesheet" href="../node_modules/mocha/mocha.css" /> -->
+		<link rel="stylesheet" href="mocha.css" />
 	</head>
-
-	<body style="overflow: auto;">
-
-		<div id="qunit"></div>
-  		<div id="qunit-fixture"></div>
+	<body>
+		<div id="mocha"></div>
 
 		<div class="reveal" style="display: none;">
 
 			<div class="slides">
 
 				<!-- Should replace two formulas here -->
-				<section data-math id="slide-1">
+				<section id="slide-1" data-math>
 					<!-- Dollar-wrapped -->
 					$$\sum_{i=0}^n \lambda_i$$
 
@@ -29,7 +24,7 @@
 
 
 				<!-- `$` escapes should work -->
-				<section data-math id="slide-2">
+				<section id="slide-2" data-math>
 					<p>This is an escaped dollar: \$</p>
 				</section>
 
@@ -56,7 +51,7 @@
 
 
 				<!-- `pmatrix` in TeX mode -->
-				<section data-math id="slide-6">
+				<section id="slide-6" data-math>
 					<p>
 						$$\begin{pmatrix}a & b \\c & d\end{pmatrix}$$
 					</p>
@@ -66,9 +61,39 @@
 
 		<script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
 		<script src="../node_modules/reveal.js/js/reveal.js"></script>
-		<script src="../node_modules/qunitjs/qunit/qunit.js"></script>
 
-		<script src="qunit-test.js"></script>
+		<!-- mocha-phantomjs -->
+		<script src="../node_modules/mocha/mocha.js"></script>
+		<script src="../node_modules/chai/chai.js"></script>
 
+		<script>
+			mocha.ui('bdd');
+			mocha.reporter('html');
+			var expect = chai.expect;
+		</script>
+		<script src="tests.js"></script>
+
+		<script>
+			Reveal.addEventListener('math-rendered', function () {
+				setTimeout(function () {
+					mocha.run();
+
+				}, 500)
+			});
+
+			Reveal.initialize({
+
+				math: {
+					enableGlobally: false,
+
+					katexScript:     '../math-katex/lib/katex-0.5.1/katex.min.js',
+					katexStylesheet: '../math-katex/lib/katex-0.5.1/katex.min.css'
+				},
+
+				dependencies: [
+					{ src: '../math-katex/math-katex.js', async: true }
+				]
+			});
+		</script>
 	</body>
 </html>
