@@ -119,4 +119,4 @@ If you don't have Node.js installed: Download reveal.js and copy it into a new d
 
 Run tests (requires Node.js): `$ npm install && npm test`
 
-Tests use [QUnit](http://qunitjs.com/) and [node-qunit-phantomjs](https://github.com/jonkemp/node-qunit-phantomjs).
+Tests use Mocha + Chai via [mocha-phantomjs](https://github.com/nathanboktae/mocha-phantomjs).
