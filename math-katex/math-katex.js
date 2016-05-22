@@ -20,8 +20,8 @@ window.RevealMath = window.RevealMath || (function() {
 
 	var options = Reveal.getConfig().math || {};
 
-	options.katexScript     = options.katexScript     || 'plugin/math-katex/lib/katex-0.5.1/katex.min.js';
-	options.katexStylesheet = options.katexStylesheet || 'plugin/math-katex/lib/katex-0.5.1/katex.min.css';
+	options.katexScript     = options.katexScript     || 'plugin/math-katex/lib/katex-0.6.0/katex.min.js';
+	options.katexStylesheet = options.katexStylesheet || 'plugin/math-katex/lib/katex-0.6.0/katex.min.css';
 
 	if ( options.ignoredElements ) {
 		options.ignoredElements = options.ignoredElements
@@ -47,8 +47,8 @@ window.RevealMath = window.RevealMath || (function() {
 		// Will try to fetch KaTeX from these URLs, if no local copy can be
 		// found
 		cdn: {
-			script:     'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js',
-			stylesheet: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css'
+			script:     'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js',
+			stylesheet: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css'
 		},
 
 		formulaClass: 'formula',
