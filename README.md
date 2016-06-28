@@ -1,5 +1,7 @@
 # math-katex Plugin
 
+[![Build Status](https://travis-ci.org/j13z/reveal.js-math-katex-plugin.svg?branch=master)](https://travis-ci.org/j13z/reveal.js-math-katex-plugin)
+
 A [reveal.js](https://github.com/hakimel/reveal.js) plugin that renders mathematical formulas inside slides using
  [KaTeX](https://github.com/Khan/KaTeX).
 
