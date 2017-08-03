@@ -15,10 +15,10 @@
   "author": "Johannes Schmitz <code@j13z.com>",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4",
-    "mocha-phantomjs": "^4.0.1",
-    "reveal.js": "^3.0.0"
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0",
+    "mocha-phantomjs": "^4.1.0",
+    "reveal.js": "^3.5.0"
   },
   "dependencies": {}
 }
