@@ -1,7 +1,7 @@
 {
   "name": "reveal.js-math-katex-plugin",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "reveal.js plugin that renders mathematical formulas using KaTeX",
   "scripts": {
     "test": "./node_modules/.bin/mocha-phantomjs test/test-runner.html"
