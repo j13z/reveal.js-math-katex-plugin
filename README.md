@@ -20,9 +20,9 @@ A [reveal.js](https://github.com/hakimel/reveal.js) plugin that renders mathemat
     Reveal.initialize({
         // … other configuration …
 
-    	dependencies: [
+        dependencies: [
             { src: 'plugin/math-katex/math-katex.js', async: true }
-    	]
+        ]
     });
     ```
 
@@ -101,9 +101,9 @@ Reveal.initialize({
     },
 
     // Specify the plugin as a dependency:
-	dependencies: [
+    dependencies: [
         { src: 'plugin/math-katex/math-katex.js', async: true }
-	]
+    ]
 });
 ```
 
