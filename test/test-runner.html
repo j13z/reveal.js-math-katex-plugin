@@ -56,6 +56,12 @@
 						$$\begin{pmatrix}a & b \\c & d\end{pmatrix}$$
 					</p>
 				</section>
+				
+				
+				<!-- macros -->
+				<section id="slide-7" data-math>
+					$$\test$$
+				</section>
 			</div>
 		</div>
 
@@ -85,6 +91,9 @@
 
 				math: {
 					enableGlobally: false,
+					rendering: {
+						macros: { '\\test': '\\text{expanded}' }
+					},
 
 					katexScript:     '../math-katex/lib/katex-0.7.1/katex.min.js',
 					katexStylesheet: '../math-katex/lib/katex-0.7.1/katex.min.css'

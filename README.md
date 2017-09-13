@@ -94,6 +94,19 @@ Reveal.initialize({
         //
         // enableGlobally: false
 
+        // Specify rendering options as explained here:
+        // https://github.com/Khan/KaTeX#rendering-options
+        // The defaults:
+        // 
+        // rendering: {
+        //     displayMode: false,
+        //     throwOnError: true,
+        //     errorColor: '#cc0000',
+        //     macros: {},  // e.g. { '\\name': 'expansion' }
+        //     colorIsTextColor: false,
+        //     maxSize: Inf,
+        // }
+
         // In case you need to load KaTeX from a different
         // location (relative or absolute URL):
         // katexScript:     'path/to/katex/katex.min.js',

@@ -131,7 +131,7 @@ window.RevealMath = window.RevealMath || (function() {
 
 				var markup;
 				try {
-					markup = lookbehind + katex.renderToString( group );
+					markup = lookbehind + katex.renderToString( group, options.rendering );
 				}
 				catch ( error ) {
 					correctErrorPosition( error, offset );  // mutates the error
