@@ -166,6 +166,17 @@
 						$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$
 					</p>
 				</section>
+
+
+				<section data-math>
+					<h2>Rendering Options</h2>
+
+					<p>
+						You can use rendering options like e.g. custom macros. With
+						<code style=font-size:1ex>rendering: { macros: { '\\test': 'x^2' }}</code>
+						in your math options, <code>\test</code> becomes $\test$
+					</p>
+				</section>
 			</div>
 		</div>
 
@@ -195,6 +206,12 @@
 					// everywhere).
 					//
 					enableGlobally: false,
+
+					// You can use KaTeX’ rendering options:
+					// https://github.com/Khan/KaTeX#rendering-options
+					rendering: {
+						macros: { '\\test': 'x^2' },
+					},
 
 					// Required for this example only, ignore --->
 					katexScript:     'math-katex/lib/katex-0.7.1/katex.min.js',

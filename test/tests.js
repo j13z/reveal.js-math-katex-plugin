@@ -88,6 +88,15 @@ describe('Handling of `&` and `pmatrix`', function () {
 });
 
 
+describe('Rendering options', function () {
+
+	it('should expand macros correctly', function () {
+		var formula = element('#slide-7 .formula');
+		expect(formula.innerHTML).to.contain('expanded');
+	});
+});
+
+
 
 // Helper methods
 
